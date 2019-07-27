@@ -15,7 +15,21 @@ if (process.env.NODE_ENV === "production") {
 
 app.get("/testing", (request, response) => {
   response.send("New Back end message");
-})
+});
+
+app.get("/markers", (request, response) => {
+  response.json([
+    {
+        title:'The marker`s title will appear as a tooltip.',
+        name:'SOMA',
+        position:{lat: 37.778519, lng: -122.405640}
+    },
+    {
+        name:'Dolores park',
+        position:{lat: 37.759703, lng: -122.428093}
+    }
+])
+});
 
 // Send every other request to the React app
 // Define any API routes before this runs

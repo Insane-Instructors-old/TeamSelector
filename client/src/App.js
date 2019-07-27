@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
 import { MDBCard, MDBCardTitle, MDBCardText, MDBContainer } from "mdbreact";
+import GoogleApiWrapper from "./GoogleMaps";
 
 class App extends Component {
   state = {
@@ -44,7 +45,7 @@ class App extends Component {
             </div>
           </MDBCard>
         </MDBContainer>
-
+        <GoogleApiWrapper />
       </div>
     );
   }
